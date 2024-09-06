@@ -7,7 +7,7 @@ import "@icon-park/react/styles/index.css";
 import axios from "axios";
 import { mapLspKindToMonacoKind } from "./pages/editor/TextEditor/convert";
 import * as monaco from "monaco-editor";
-import { lspSceneName } from "@/runtime/WG_ORIGINE_RUNTIME";
+import { lspSceneName } from "./runtime/WG_ORIGINE_RUNTIME";
 import './config/themes/theme.css';
 import './assets/font-family.css';
 import useEditorStore from "./store/useEditorStore";
@@ -16,7 +16,7 @@ import useLanguage from "./hooks/useLanguage";
 import TemplateEditor from "./pages/templateEditor/TemplateEditor";
 import GameEditorProvider from "./components/Provider/GameEditorProvider";
 import TemplateEditorProvider from "./components/Provider/TemplateEditorProvider";
-import {eventBus} from "@/utils/eventBus";
+import {eventBus} from "./utils/eventBus";
 import {loader} from "@monaco-editor/react";
 
 export const routers: { [key in IPage]: { url: string, element: ReactNode } } = {

@@ -65,12 +65,16 @@ initializeIcons();
 
 i18n.activate('zhCn');
 // 不用 StrictMode，因为会和 react-butiful-dnd 冲突
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  // <React.StrictMode>
-  <FluentProvider theme={lightTheme} style={{width: '100%', height: '100%'}}>
-    <I18nProvider i18n={i18n}>
-      <App/>
-    </I18nProvider>
-  </FluentProvider>
+
+const Main = () => {
+  return (  // <React.StrictMode>
+    <FluentProvider theme={lightTheme} style={{width: '100%', height: '100%'}}>
+      <I18nProvider i18n={i18n}>
+        <App/>
+      </I18nProvider>
+    </FluentProvider>
   // </React.StrictMode>
-);
+  );
+};
+
+export default Main;

@@ -4,8 +4,8 @@
   "version": "4.5.4",
   "license": "MPL-2.0",
   "scripts": {
-    "dev": "lingui extract && lingui compile --typescript && vite --host",
-    "build": "lingui extract && lingui compile --typescript && node version-sync.js && tsc && vite build --base=./",
+    "dev": "lingui extract && lingui compile --typescript && next dev --turbo",
+    "build": "lingui extract && lingui compile --typescript && node version-sync.js && tsc && next build",
     "build-lowram": "lingui extract && lingui compile --typescript && node version-sync.js && tsc && node --max_old_space_size=512000 ./node_modules/bin/vite build --base=./",
     "preview": "vite preview",
     "lint": "eslint src/** --fix",
@@ -32,18 +32,19 @@
     "monaco-editor": "^0.34.1",
     "monaco-editor-textmate": "^4.0.0",
     "monaco-textmate": "^3.0.1",
+    "next": "^14.2.5",
     "onigasm": "^2.2.5",
     "primereact": "^9.5.0",
     "react": "^18.0.0",
     "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^18.0.0",
-    "sass": "^1.51.0",
     "swr": "^2.2.4",
     "webgal-parser": "latest",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@lingui/cli": "^4.8.0",
+    "@lingui/swc-plugin": "^4.0.8",
     "@lingui/vite-plugin": "^4.8.0",
     "@types/lodash": "^4.14.182",
     "@types/react": "^18.0.0",
@@ -56,12 +57,15 @@
     "esbuild": "^0.18.11",
     "eslint": "^8.13.0",
     "eslint-config-alloy": "^4.5.1",
+    "eslint-config-next": "^14.2.5",
     "eslint-plugin-react": "^7.29.4",
     "lint-staged": "^12.3.7",
+    "next-transpile-modules": "^10.0.1",
     "prettier": "^2.6.2",
+    "sass": "^1.77.8",
     "swagger-typescript-api": "^13.0.3",
     "tsx": "^3.14.0",
-    "typescript": "^4.6.3",
+    "typescript": "^5.5.4",
     "vite": "^4.4.9"
   }
 }
